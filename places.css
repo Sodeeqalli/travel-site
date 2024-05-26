@@ -1,5 +1,6 @@
 body{
-    background: linear-gradient(30deg, rgb(77,77,77), rgb(58,58,58))
+    background: linear-gradient(30deg, rgb(77,77,77), rgb(58,58,58));
+    color: rgb(68, 68, 68)
 }
 
 main li img{
@@ -9,8 +10,12 @@ main li img{
     
 }
 main ul{
-    width: 800px;
-    margin: 0 auto;
+    width: 1200px;
+    margin: 0 auto 48px auto;
+    display: grid;
+    gap: 10px 10px;
+    grid-template-columns: 1fr 1fr;
+    justify-content:space-around;
 }
 
 main li{
@@ -19,9 +24,27 @@ main li{
     box-shadow: 1px 1px 4px rgb(0,0,0,0.2);
     border-radius: 6px;
     overflow:hidden;
+    width: 100%;
+}
 
+main li:nth-of-type(3){
+    grid-column: 1/ span 2;
+}
+header li a {
+    color: rgb(183, 230, 235);
+}
+
+header nav a:hover{
+    background-color: rgb(183, 230, 235);
+    color: rgb(59, 59, 59);
 
 }
+
+#page-logo a{
+   color: rgb(183, 230, 235);
+    }
+
+
 
 header{
     position: static;
@@ -29,26 +52,33 @@ header{
 
 .item-content{
     padding: 25px;
-}
-.item-content p{
-    color: rgb(101, 101, 101);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
 }
 
-.actions{
-    height: 40%;
-   display: flex; 
-   justify-content: flex-end;
-   align-items:end;
+.item-content h2{
+    margin-top: 0px;
+
 }
+
+
+.actions{
+    text-align: right;
+}
+
+
 
 .actions a{
     text-decoration: none;
-    color: rgb(27, 217, 195);
-    padding: 5px;
+    color: rgb(22, 211, 228);
+    padding: 6px;
     border-radius:6px ;
+    
 }
 
 .actions a:hover{
-    background-color: rgb(210, 249, 249);
+    background-color: rgb(235, 253, 255);
 }
 
